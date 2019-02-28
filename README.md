@@ -1,2 +1,2 @@
-# Quanto UI
+# Quanto UI Kit
 
