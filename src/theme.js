@@ -1,4 +1,5 @@
 // descbribe your themes here
+
 const themes = {
   default: {
     typo: {
@@ -15,21 +16,26 @@ const themes = {
       container: 960,
     },
     palette: {
-      foreground: '',
-      background: '',
-      hyperlink: '',
-      card: '',
-      red: '',
-      blue: '',
-      green: '',
-      yellow: '',
-      black: '',
-      white: '',
-      gray: '',
+      blue: '#4664D3',
+      lightBlue: '#4a90e2',
+      darkBlue: '#044077',
+      sandBlue: '#f4f5fb',
+      purple: '#733FE0',
+      red: '#ff2f48',
+      green: '#0fbc9d',
+      lightGreen: '#b8e986',
+      darkGreen: '#1fa990',
+      black: '#000',
+      darkGrey: '#545454',
+      regularGrey: '#a8a8a8',
+      lightGrey: 'e0e0e0',
+      sandGrey: '#fcfcfc',
+      white: '#fff',
     },
     iconDirectory: '/assets/icons/',
     imageDirectory: '/assets/images/',
   },
+  isNative: false,
 }
 
 // describe your current theme name here
