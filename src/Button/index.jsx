@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
+import _theme from './../theme';
 
 type Props = {
   children: any,
@@ -15,10 +16,9 @@ type Props = {
 const Button = (props: Props) => {
   const StyledButton = styled.button`
     width: ${props.fluid ? '100%' : 'auto'};
-    padding: 9px;
-    font-size: 1.563em;
-    font-family: Campton;
-    background: url(/assets/icons/${props.icon}.svg) no-repeat 98% #4664D3;
+    padding: ${_theme.rythm.base}px;
+    font-size: ${_theme.typo.scale[3]};
+    background: url(${_theme.imageDirectory}${props.icon}.svg) no-repeat 98% #4664D3;
     color: white;
     border: none;
     background-size: 40px 30px;

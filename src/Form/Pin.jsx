@@ -3,6 +3,7 @@
 // eslint-disable-next-line
 import { css, jsx } from '@emotion/core';
 import PinInput from 'react-pin-input';
+import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -13,12 +14,12 @@ type Props = {
 const PinStyles = {
   input: {
     border: 'none',
-    borderBottom: 'solid 2px #a8a8a8',
-    fontSize: '30px',
+    borderBottom: `solid 2px ${_theme.palette.regularGrey}`,
+    fontSize: `${_theme.typo.scale[6]}em`,
     margin: '0 8px',
   },
   inputFocus: {
-    borderBottom: 'solid 2px #4664D3',
+    borderBottom: `solid 2px ${_theme.palette.blue}`,
   }
 }
 

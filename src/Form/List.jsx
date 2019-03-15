@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
+import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -15,9 +16,9 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   padding: 18px 0;
-  border-bottom: solid thin #e0e0e0;
+  border-bottom: solid thin ${_theme.palette.lightGrey};
   cursor: pointer;
-  font-size: 16px;
+  font-size: ${_theme.typo.scale[1]}em;
 
   :nth-last-child(1) {
     border-bottom: none;

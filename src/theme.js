@@ -5,12 +5,24 @@ const themes = {
     typo: {
       directory: '/assets/fonts/',
       base: 16,
-      lineHeight: '1.5',
-      scale: [0.8, 1, 1.25, 1.563, 1.953, 2.441, 3.052],
+      lineHeight: 1.5,
+      scale: [
+        0.8,
+        1,
+        1.25,
+        1.563,
+        1.953,
+        2.441,
+        3.052,
+      ],
     },
     rythm: {
       base: 9,
-      scale: [9, 27, 81],
+      scale: [
+        9,
+        27,
+        81,
+      ],
     },
     grid: {
       container: 960,
@@ -28,7 +40,7 @@ const themes = {
       black: '#000',
       darkGrey: '#545454',
       regularGrey: '#a8a8a8',
-      lightGrey: 'e0e0e0',
+      lightGrey: '#e0e0e0',
       sandGrey: '#fcfcfc',
       white: '#fff',
     },

@@ -6,6 +6,7 @@ import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import uniqid from 'uniqid';
 import InputMask from 'react-input-mask';
+import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -28,7 +29,7 @@ class Text extends PureComponent<Props> {
   handleErase() {
     if (this.props.password) {
       this.password.current.value = '';
-      
+
       return;
     }
 
@@ -50,12 +51,12 @@ class Text extends PureComponent<Props> {
     font-family: inherit;
     width: 100%;
     border: 0;
-    border-bottom: 1px solid #a8a8a8;
+    border-bottom: 1px solid ${_theme.palette.regularGrey};
     outline: 0;
-    font-size: 16px;
+    font-size: ${_theme.typo.scale[1]}em;
     color: #212121;
     padding: 7px 0;
-    background: #fff;
+    background: ${_theme.palette.white};
     transition: border-color 0.2s;
 
     ::placeholder {
@@ -63,13 +64,13 @@ class Text extends PureComponent<Props> {
     }
 
     :placeholder-shown ~ .form__label {
-      font-size: 16px;
+      font-size: ${_theme.typo.scale[1]}em;
       cursor: text;
       top: 20px;
     }
 
     :focus ~ .form__label {
-      color: #a8a8a8;
+      color: ${_theme.palette.regularGrey};
       position: absolute;
       top: 0;
       display: block;
@@ -83,7 +84,7 @@ class Text extends PureComponent<Props> {
 
     :focus {
       padding-bottom: 6px;
-      border-bottom: 2px solid #4664D3;
+      border-bottom: 2px solid ${_theme.palette.blue};
     }
     `;
 
@@ -100,7 +101,7 @@ class Text extends PureComponent<Props> {
       opacity: 0;
       width: 20px;
       height: 20px;
-      background: url(/assets/icons/cancel.svg) no-repeat #fff;
+      background: url(${_theme.iconDirectory}cancel.svg) no-repeat #fff;
       background-size: 20px;
       border: none;
       cursor: pointer;

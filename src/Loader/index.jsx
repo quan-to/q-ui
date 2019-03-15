@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
+import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -13,7 +14,7 @@ const Loader = (props: Props) => {
     display: relative;
     width: ${props.size}px;
     height: ${props.size}px;
-    background-color: #fff;
+    background-color: ${_theme.palette.white};
     padding: 0;
     margin: 0;
     border: none;
@@ -21,7 +22,7 @@ const Loader = (props: Props) => {
     animation: spin 3s infinite ease-in-out;
 
     > div {
-      background-color: #4563D9;
+      background-color: ${_theme.palette.blue};
       width: ${(props.size / 3)}px;
       height: ${(props.size / 3)}px;
       display: inline-block;
@@ -33,7 +34,7 @@ const Loader = (props: Props) => {
     }
 
     > div:nth-child(5) {
-      background-color: #fff;
+      background-color: ${_theme.palette.white};
     }
 
     > div:nth-child(9) {

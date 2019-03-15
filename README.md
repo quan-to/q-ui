@@ -1,8 +1,19 @@
 # Quanto UI Toolkit
 
+
+
 ## Setup
 
-### Theme
+```bash
+npm install;
+mv src/themes.example.js src/themes.js
+```
+
+
+
+### Themes
+
+
 
 ### Typography
 
@@ -16,7 +27,7 @@
 
 
 
-### Components
+## Components
 
 ### Button
 
@@ -45,6 +56,8 @@
 ### Timer
 
 ### Typo
+
+
 
 ## Atelier
 

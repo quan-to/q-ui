@@ -3,12 +3,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import uniqid from 'uniqid';
+import _theme from './../theme';
 
 type Props = {
   name: string,
   value: string,
   id?: string,
   className?: string,
+  checked?: boolean,
 };
 
 const Checkbox = (props:Props) => {
@@ -18,15 +20,15 @@ const Checkbox = (props:Props) => {
     display: none;
 
     :checked + label {
-      background: url(/assets/images/checkbox.svg) no-repeat;
+      background: url(${_theme.imageDirectory}checkbox.svg) no-repeat;
     }
   `;
 
   const Label = styled.label`
     display: block;
-    width: 24px;
-    height: 24px;
-    background: url(/assets/images/checkbox-blank.svg) no-repeat;
+    width: ${_theme.rythm.scale[1]}px;
+    height: ${_theme.rythm.scale[1]}px;
+    background: url(${_theme.imageDirectory}checkbox-blank.svg) no-repeat;
   `;
 
   return (

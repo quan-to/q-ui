@@ -4,6 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Paragraph } from './../Typo';
 import Icon from './../Icon';
+import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -22,9 +23,9 @@ const Notification = (props: Props) => {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #4664D3;
-    padding: 9px 0;
-    box-shadow: 0px 0px 34px #313131;
+    background: ${_theme.palette.blue};
+    padding: ${_theme.rythm.scale[0]}px 0;
+    box-shadow: 0px 0px 34px ${_theme.palette.regularGrey};
 
     > button {
       float: right;
@@ -34,18 +35,16 @@ const Notification = (props: Props) => {
     }
 
     > h3 {
-      margin: 17px 27px 0;
+      margin: 17px ${_theme.rythm.scale[1]}px 0;
       color: #fff;
       text-transform: uppercase;
-      font-family: 'Campton';
       font-weight: bolder;
     }
 
     > p {
-      margin: 20px 27px 9px;
-      color: #fff;
+      margin: 20px ${_theme.rythm.scale[1]}px 9px;
+      color: ${_theme.palette.white};
       text-transform: uppercase;
-      font-family: 'Campton';
     }
   `;
 
