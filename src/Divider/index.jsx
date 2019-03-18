@@ -6,7 +6,7 @@ const Hr = styled.hr`
   width: 30px;
   height: 2px;
   margin: ${_theme.rythm.scale[1]}px 0;
-  background: #4664D3;
+  background: ${_theme.palette.blue};
 `;
 
 const Divider = () => (

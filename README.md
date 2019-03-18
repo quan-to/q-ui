@@ -31,7 +31,7 @@ You will see that our `default` theme it's just a primary element inside the the
 
 ### Typography
 
-Use `typo` to store your setup data only about typography configurations and use our Font Component to add your fonts families, sizes, styles, etc...
+Use `typo` to store your setup data only about typography configurations and use our Font Component later to add your fonts families, sizes, styles, etc...
 
 ```
 typo: {
@@ -77,18 +77,86 @@ Use `iconDirectory` and `imageDirectory` to setup where some components will loa
 
 
 ## Components
+All components have a self contained style and can be directly imported. Below we'll describe da basic usage for each one.
+
 
 
 ### Button
 
+```react
+<Button 
+	onClick={myHandlerFunc}
+	className="my-helper-classname"
+	disable={false}
+	fluid={true}
+	icon={'my-image-name'}
+>
+	<span>Hi, a can handle a child element as well.</span>
+</Button>
+```
+
+#### Notes:
+
+- If your button's `disable` prop is `true`, `onClick` function will not be triggered.
+
+- Describe your button's `icon` with the name of the image inside the image folder you've described during the themes setting up.
+
+
 
 ### Divider
+
+Will render a simple divider between.
+
+```react
+<Divider />
+```
+
 
 
 ### Flexbox (Grid)
 
+It's a wrapper for flexboxgrid. For more informations about how you can combine values and behaviors, please visit http://flexboxgrid.com/.
+
+```react
+<Container
+	fluid={true}
+	className="my-helper-classname"
+	style={myStyleObj}
+>
+	<Row
+    	className="my-helper-classname"
+        start="md"
+		end="lg"
+        top="sm"
+        bottom="md"
+        center="sm"
+        around="lg"
+        between="md"
+        reverse={false}
+    >
+		<Col
+            className="my-helper-classname"
+            xs="8"
+			sm="6"
+            md="4"
+            lg="2"
+            xsOffset="4"
+			smOffset="6"
+			mdOffset="8"
+            lgOffset="10"
+            first="md"
+			last="lg"
+		>
+        </Col>
+    </Row>
+</Container>
+```
+
+
 
 ### Form
+
+
 
 
 ### Icon
