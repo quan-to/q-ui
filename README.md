@@ -119,8 +119,8 @@ It's a wrapper for flexboxgrid. For more informations about how you can combine 
 
 ```react
 <Container
+    className="my-helper-classname"
 	fluid={true}
-	className="my-helper-classname"
 	style={myStyleObj}
 >
 	<Row
@@ -156,37 +156,269 @@ It's a wrapper for flexboxgrid. For more informations about how you can combine 
 
 ### Form
 
+All these components are self-contained and works properly without any integration with a container, however we suggest you to use a form handler/validator.
+
+```react
+//Requirements
+import { 
+    Checkbox,
+    List as FormList,
+    Pin,
+    Text 
+} from './q-ui/Form';
+
+// Checkbox 
+<Checkbox 
+    className="my-helper-classname"
+    name="myCheckbox"
+    value={props.myCheckbox.value}
+    id="myCheckbox"
+    checked={props.myCheckbox.checked}
+/>
+
+//List
+const myFormListItem = [
+    { key: '', content: ''},
+];
+
+<FormList
+   className="my-helper-classname"
+   items={myFormListItem}
+   onClick={myHandlerFunc}
+/>
+
+//Pin
+<Pin
+	className="my-helper-classname"
+    length={4}
+    onComplete={myPinHandlerFunc}
+/>
+
+//Text
+<Text
+  className="my-helper-classname"
+  placeholder="Branch number"
+  name="branch"
+  mask="99999-9"
+  maskChar=" "
+/>
+
+<Text
+  className="my-helper-classname"
+  placeholder="Password"
+  name="password"
+/>
+```
+
+#### Note:
+
+- Use `ReactDom.createRef()` to access these components values.
 
 
 
 ### Icon
 
+Will render an icon based on your iconography.
+
+```react
+<Icon 
+	className="my-helper-classname"
+	size={27}
+    name="arrow-back"
+/>
+```
+
+#### Notes
+
+- Describe your Icon `name`  with the name of the icon inside the icon folder you've described during the themes setting up.
+- An Icon component expeted a simetric/squared icon. That's why you describe the size only with one value.
+
+
 
 ### Image
 
+Will render an icon based on your iconography.
+
+```react
+<Image
+	className="my-helper-classname"
+	file="my-image-name.svg"
+	width={100}
+    height={60}
+    position="cover"
+/>
+```
+
+#### Notes
+
+- Describe your Image `file`  with the name of the image inside the image folder you've described during the themes setting up.
+
+  
 
 ### If
+
+Use this component to feature, component or content switch.
+
+```react
+<If test={props.isActive}>
+	<span>It´s active</span>
+</If>
+```
+
 
 
 ### List
 
+Will render a simple list.
+
+```react
+const myListItem = [
+    { key: '', content: '' },
+];
+
+<List
+	className="my-helper-classname"
+    items={myListItem}
+/>
+```
+
+
 
 ### Loader
+
+Will render our animated loader.
+
+```react
+<Loader
+    className="my-helper-classname"
+  	size={81}  
+/>
+```
+
 
 
 ### Logo
 
+Will render your application logo.
+
+```react
+<Logo
+    className="my-helper-classname"
+    onClick={myHandlerFunc}
+    size={81}
+/>
+```
+
+#### Note:
+
+- This component will search a `logo.png` file inside your images directory.
+
+
 
 ### Notification
+
+Will render a bottom notification component based in `status` value (boolean).
+
+```react
+<Notification
+  className="my-helper-classname"
+  title="Connection Error"
+  message="There's something wrong with your internet connection."
+  onClose={myHandlerFunc}
+  status={props.notificationStatus}
+/>
+```
+
 
 
 ### Nucleo
 
+TBD
 
 ### Timer
+
+Use this component to put a feature or component inside a time lapse.
+
+```react
+<Timer seconds={120}>
+	<span>Time's up</span>
+</Timer>
+```
+
 
 
 ### Typo
 
+```react
+//Requirements
+import { 
+	Setup as Typo,
+	Font, 
+    Title,
+    SubTitle,
+    Paragraph,
+} from './q-ui/Typo';
+
+//Setup
+<Typo
+	baseLine={16}
+	color="#000"
+    font="Campton, Helvetica, Arial, sans-serif"
+    lineHeight={1.2}
+    reactNative={false}
+/>
+
+//Font
+<Font
+    name="Campton"
+    url="CamptonBook.otf"
+/>
+
+//Title
+<Title primary
+    className="my-helper-classname"
+>H1 title</Title>
+
+<Title secondary
+    className="my-helper-classname"
+>H2 title</Title>
+
+//SubTitle
+<SubTitle primary
+    className="my-helper-classname"
+>H4 title</Subitle>
+
+<SubTitle secondary
+    className="my-helper-classname"
+>H5 title</SubTitle>
+
+//Paragraph
+<Paragraph
+  	className="my-helper-classname"
+  	small={true},
+>Content</Paragraph>
+```
+
+
+
 
 ## Atelier
+
+If you want a view to checkout your themed toolkit, inject the Atelier (view) Component into your React-Router switch.
+
+```react
+import { Atelier } from './q-ui';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+} from 'react-router-dom';
+
+<Router>
+	<Switch>
+		<Route exact path="/" component={Index} />
+		<Route path="/atelier" component={Atelier} />
+	</Switch>
+</Router>
+```
+
