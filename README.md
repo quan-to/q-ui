@@ -83,15 +83,15 @@ All components have a self contained style and can be directly imported. Below w
 
 ### Button
 
-```react
-<Button 
-	onClick={myHandlerFunc}
-	className="my-helper-classname"
-	disable={false}
-	fluid={true}
-	icon={'my-image-name'}
+```javascript
+<Button
+  onClick={myHandlerFunc}
+  className="my-helper-classname"
+  disable={false}
+  fluid={true}
+  icon={'my-image-name'}
 >
-	<span>Hi, a can handle a child element as well.</span>
+  <span>Hi, a can handle a child element as well.</span>
 </Button>
 ```
 
@@ -107,7 +107,7 @@ All components have a self contained style and can be directly imported. Below w
 
 Will render a simple divider between.
 
-```react
+```javascript
 <Divider />
 ```
 
@@ -117,38 +117,39 @@ Will render a simple divider between.
 
 It's a wrapper for flexboxgrid. For more informations about how you can combine values and behaviors, please visit http://flexboxgrid.com/.
 
-```react
+```javascript
 <Container
-    className="my-helper-classname"
-	fluid={true}
-	style={myStyleObj}
+  className="my-helper-classname"
+  fluid={true}
+  style={myStyleObj}
 >
 	<Row
-    	className="my-helper-classname"
-        start="md"
-		end="lg"
-        top="sm"
-        bottom="md"
-        center="sm"
-        around="lg"
-        between="md"
-        reverse={false}
+    className="my-helper-classname"
+    start="md"
+    end="lg"
+    top="sm"
+    bottom="md"
+    center="sm"
+    around="lg"
+    between="md"
+    reverse={false}
+  >
+    <Col
+      className="my-helper-classname"
+      xs="8"
+      sm="6"
+      md="4"
+      lg="2"
+      xsOffset="4"
+      smOffset="6"
+      mdOffset="8"
+      lgOffset="10"
+      first="md"
+      last="lg"
     >
-		<Col
-            className="my-helper-classname"
-            xs="8"
-			sm="6"
-            md="4"
-            lg="2"
-            xsOffset="4"
-			smOffset="6"
-			mdOffset="8"
-            lgOffset="10"
-            first="md"
-			last="lg"
-		>
-        </Col>
-    </Row>
+      Content here
+    </Col>
+  </Row>
 </Container>
 ```
 
@@ -158,22 +159,22 @@ It's a wrapper for flexboxgrid. For more informations about how you can combine 
 
 All these components are self-contained and works properly without any integration with a container, however we suggest you to use a form handler/validator.
 
-```react
+```javascript
 //Requirements
-import { 
-    Checkbox,
-    List as FormList,
-    Pin,
-    Text 
+import {
+  Checkbox,
+  List as FormList,
+  Pin,
+  Text
 } from './q-ui/Form';
 
-// Checkbox 
-<Checkbox 
-    className="my-helper-classname"
-    name="myCheckbox"
-    value={props.myCheckbox.value}
-    id="myCheckbox"
-    checked={props.myCheckbox.checked}
+// Checkbox
+<Checkbox
+  className="my-helper-classname"
+  name="myCheckbox"
+  value={props.myCheckbox.value}
+  id="myCheckbox"
+  checked={props.myCheckbox.checked}
 />
 
 //List
@@ -182,16 +183,16 @@ const myFormListItem = [
 ];
 
 <FormList
-   className="my-helper-classname"
-   items={myFormListItem}
-   onClick={myHandlerFunc}
+  className="my-helper-classname"
+  items={myFormListItem}
+  onClick={myHandlerFunc}
 />
 
 //Pin
 <Pin
-	className="my-helper-classname"
-    length={4}
-    onComplete={myPinHandlerFunc}
+  className="my-helper-classname"
+  length={4}
+  onComplete={myPinHandlerFunc}
 />
 
 //Text
@@ -199,7 +200,7 @@ const myFormListItem = [
   className="my-helper-classname"
   placeholder="Branch number"
   name="branch"
-  mask="99999-9"
+  mask="9999"
   maskChar=" "
 />
 
@@ -220,11 +221,11 @@ const myFormListItem = [
 
 Will render an icon based on your iconography.
 
-```react
-<Icon 
-	className="my-helper-classname"
-	size={27}
-    name="arrow-back"
+```javascript
+<Icon
+  className="my-helper-classname"
+  size={27}
+  name="arrow-back"
 />
 ```
 
@@ -239,13 +240,13 @@ Will render an icon based on your iconography.
 
 Will render an icon based on your iconography.
 
-```react
+```javascript
 <Image
-	className="my-helper-classname"
-	file="my-image-name.svg"
-	width={100}
-    height={60}
-    position="cover"
+  className="my-helper-classname"
+  file="my-image-name.svg"
+  width={100}
+  height={60}
+  position="cover"
 />
 ```
 
@@ -253,15 +254,15 @@ Will render an icon based on your iconography.
 
 - Describe your Image `file`  with the name of the image inside the image folder you've described during the themes setting up.
 
-  
+
 
 ### If
 
 Use this component to feature, component or content switch.
 
-```react
+```javascript
 <If test={props.isActive}>
-	<span>It´s active</span>
+  <span>It´s active</span>
 </If>
 ```
 
@@ -271,14 +272,14 @@ Use this component to feature, component or content switch.
 
 Will render a simple list.
 
-```react
+```javascript
 const myListItem = [
-    { key: '', content: '' },
+  { key: '', content: '' },
 ];
 
 <List
-	className="my-helper-classname"
-    items={myListItem}
+  className="my-helper-classname"
+  items={myListItem}
 />
 ```
 
@@ -288,10 +289,10 @@ const myListItem = [
 
 Will render our animated loader.
 
-```react
+```javascript
 <Loader
-    className="my-helper-classname"
-  	size={81}  
+  className="my-helper-classname"
+  size={81}  
 />
 ```
 
@@ -301,11 +302,11 @@ Will render our animated loader.
 
 Will render your application logo.
 
-```react
+```javascript
 <Logo
-    className="my-helper-classname"
-    onClick={myHandlerFunc}
-    size={81}
+  className="my-helper-classname"
+  onClick={myHandlerFunc}
+  size={81}
 />
 ```
 
@@ -319,7 +320,7 @@ Will render your application logo.
 
 Will render a bottom notification component based in `status` value (boolean).
 
-```react
+```javascript
 <Notification
   className="my-helper-classname"
   title="Connection Error"
@@ -339,9 +340,9 @@ TBD
 
 Use this component to put a feature or component inside a time lapse.
 
-```react
+```javascript
 <Timer seconds={120}>
-	<span>Time's up</span>
+  <span>Times up</span>
 </Timer>
 ```
 
@@ -349,53 +350,53 @@ Use this component to put a feature or component inside a time lapse.
 
 ### Typo
 
-```react
+```javascript
 //Requirements
-import { 
-	Setup as Typo,
-	Font, 
-    Title,
-    SubTitle,
-    Paragraph,
+import {
+  Setup as Typo,
+  Font,
+  Title,
+  SubTitle,
+  Paragraph,
 } from './q-ui/Typo';
 
 //Setup
 <Typo
-	baseLine={16}
-	color="#000"
-    font="Campton, Helvetica, Arial, sans-serif"
-    lineHeight={1.2}
-    reactNative={false}
+  baseLine={16}
+  color="#000"
+  font="Campton, Helvetica, Arial, sans-serif"
+  lineHeight={1.2}
+  reactNative={false}
 />
 
 //Font
 <Font
-    name="Campton"
-    url="CamptonBook.otf"
+  name="Campton"
+  url="CamptonBook.otf"
 />
 
 //Title
 <Title primary
-    className="my-helper-classname"
+  className="my-helper-classname"
 >H1 title</Title>
 
 <Title secondary
-    className="my-helper-classname"
+  className="my-helper-classname"
 >H2 title</Title>
 
 //SubTitle
 <SubTitle primary
-    className="my-helper-classname"
+  className="my-helper-classname"
 >H4 title</Subitle>
 
 <SubTitle secondary
-    className="my-helper-classname"
+  className="my-helper-classname"
 >H5 title</SubTitle>
 
 //Paragraph
 <Paragraph
-  	className="my-helper-classname"
-  	small={true},
+  className="my-helper-classname"
+  small={true},
 >Content</Paragraph>
 ```
 
@@ -406,19 +407,18 @@ import {
 
 If you want a view to checkout your themed toolkit, inject the Atelier (view) Component into your React-Router switch.
 
-```react
+```javascript
 import { Atelier } from './q-ui';
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
+  BrowserRouter as Router,
+  Route,
+  Switch,
 } from 'react-router-dom';
 
 <Router>
-	<Switch>
-		<Route exact path="/" component={Index} />
-		<Route path="/atelier" component={Atelier} />
-	</Switch>
+  <Switch>
+    <Route exact path="/" component={Index} />
+    <Route path="/atelier" component={Atelier} />
+  </Switch>
 </Router>
 ```
-
