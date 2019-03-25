@@ -41,7 +41,7 @@ const themes = {
       darkGrey: '#545454',
       regularGrey: '#a8a8a8',
       lightGrey: '#e0e0e0',
-      sandGrey: '#fcfcfc',
+      sandGrey: '#eee',
       white: '#fff',
     },
     iconDirectory: '/assets/icons/',
