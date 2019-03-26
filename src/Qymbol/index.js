@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
 
 type Props = {
   className?: string,
@@ -18,6 +17,7 @@ const Qymbol = (props: Props) => {
     width: ${props.blockSize * 3}px;
     height: ${props.blockSize * 4}px;
     background: transparent;
+    cursor: pointer;
 
     > rect {
       width: ${props.blockSize}px;
@@ -31,7 +31,10 @@ const Qymbol = (props: Props) => {
   `;
 
   return (
-    <StyledSVG>
+    <StyledSVG
+      className={props.className || ''}
+      {...props}
+    >
       <rect
         x="0"
         y="0"

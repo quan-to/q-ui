@@ -39,5 +39,12 @@ export default function(props: Props) {
     .t--bold {
       font-weight: bolder;
     }
+
+    .t--right {
+      text-align: right;
+    }
+    .t--left {
+      text-align: left !important;
+    }
   `} />)
 };

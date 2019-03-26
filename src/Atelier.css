@@ -1,0 +1,56 @@
+.fixed {
+  position: fixed;
+  max-height: 90vh;
+
+}
+.hidden {
+  display: none;
+}
+
+
+.q-symbol > div {
+  display: inline-block;
+  margin: 0 0 -8px 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.q-symbol > .blue {
+  background: #4664D3;
+}
+
+.q-symbol--small {
+  display: inline-block;
+  width: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.q-symbol--small > div {
+  display: inline-block;
+  margin-bottom: -10px;
+  width: 20px;
+  height: 20px;
+}
+
+.q-symbol--small > .blue {
+  background: #4664D3;
+}
+
+.desc-card {
+  border-top: solid 20px  #4664D3;
+  border-bottom: solid 20px  #4664D3;
+  padding: 27px;
+  background: #fff;
+}
+
+pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  background: #e0e0e0;
+  padding: 9px;
+  margin: 9px 0;
+  font-size: 14px;
+}
