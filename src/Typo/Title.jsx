@@ -6,10 +6,14 @@ import _theme from './../theme';
 
 const H1 = styled.h1`
   font-size: ${_theme.typo.scale[6]}em;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
 const H2 = styled.h2`
   font-size: ${_theme.typo.scale[5]}em;
+  text-transform: uppercase;
+  font-weight: bold;
 `;
 
 type Props = {

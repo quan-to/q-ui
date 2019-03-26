@@ -94,7 +94,7 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
 
 <pre>
 {`rythm: {
-  base: <Number> Primary number to guide your rythm pattern
+  base: <Number> Primary number to guide your vertical rythm
   scale: <Array> Scales to multiply the base value
 }`}
 </pre>
@@ -106,20 +106,89 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
       typography: {
         name: 'Typography',
         content: (
-          <div>...</div>
-        )
+          <section>
+            <Title className="uppercase color--blue t--bold">Typography</Title>
+            <div className="desc-card">
+              <SubTitle secondary className="uppercase color--blue t--bold space--bottom">
+                Titles
+              </SubTitle>
+              <Title primary>Primary title</Title>
+              <Title secondary>Secondary title</Title>
+              <pre>
+              {`<Title primary>Primary title</Title>
+<Title secondary>Secondary title</Title>`}
+              </pre>
+              <SubTitle secondary className="uppercase color--blue t--bold space--bottom space--top--large">
+                Subtitles
+              </SubTitle>
+              <SubTitle primary>Primary subtitle</SubTitle>
+              <SubTitle secondary>Secondary subtitle</SubTitle>
+              <SubTitle tertiary>Tertiary subtitle</SubTitle>
+              <pre>
+              {`<SubTitle primary>Primary subtitle</SubTitle>
+<SubTitle secondary>Secondary subtitle</SubTitle>
+<SubTitle tertiary>Tertiary subtitle</SubTitle>`}
+              </pre>
+              <SubTitle secondary className="uppercase color--blue t--bold space--bottom space--top--large">
+                Paragraph
+              </SubTitle>
+              <Paragraph>Regular paragraph</Paragraph>
+              <Paragraph small>Small paragraph</Paragraph>
+              <pre>
+                {`<Paragraph>Regular paragraph</Paragraph>
+<Paragraph small>Small paragraph</Paragraph>`}
+              </pre>
+            </div>
+          </section>
+        ),
       },
-      rythm: {
-        name: 'Rythm',
+      loader: {
+        name: 'Loader',
         content: (
-          <div>...</div>
-        )
+          <section>
+            <Title className="uppercase color--blue t--bold">Typography</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                  It's basically an animated component.
+                  We suggest you use him with strict size container around.
+                  <pre className="margin--bottom--large">{`<Loader size={50} />`}</pre>
+                  <Loader size={50} />
+                </Col>
+              </Row>
+            </div>
+          </section>),
       },
       flexbox: {
         name: 'Flexbox',
         content: (
-          <div>...</div>
-        )
+          <section>
+            <Title className="uppercase color--blue t--bold">Flexbox</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                  We're using the most popular Flexbox grid library, the
+                  <a href="http://flexboxgrid.com/" target="_blank"> Flexboxgrid</a>.
+
+                  Below you'll see how to use our components to create a great
+                  fluid and responsive views.
+
+                  <SubTitle secondary className="uppercase color--blue t--bold space--bottom space--top--large">
+                    Container
+                  </SubTitle>
+                  <pre className="margin--bottom--large">{`import { Container } from 'q-ui/Flexbox';
+
+<Container>
+  Content here...
+</Container>
+
+<Container fluid>
+  Fluid content here...
+</Container>`}</pre>
+                </Col>
+              </Row>
+            </div>
+          </section>),
       },
       button: {
         name: 'Button',
@@ -231,17 +300,17 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
               />
               <Qymbol
                 className="space--right--large"
-                onClick={() => this.handleSelectComponent('rythm')}
-                onMouseEnter={() => this.handleHoverComponent('rythm')}
+                onClick={() => this.handleSelectComponent('loader')}
+                onMouseEnter={() => this.handleHoverComponent('loader')}
                 onMouseLeave={() => this.handleHoverComponent('welcome')}
                 background={_theme.palette.sandGrey}
                 foreground={_theme.palette.blue}
                 blockSize={20}
                 blocks={[
-                  [1, 0, 0],
-                  [1, 1, 0],
-                  [0, 1, 1],
+                  [1, 1, 1],
+                  [1, 0, 1],
                   [0, 0, 1],
+                  [1, 1, 1],
                 ]}
               />
             </Col>
@@ -378,21 +447,6 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
             <Col sm={12}>
               <Qymbol
                 className="space--right--large"
-                onClick={() => this.handleSelectComponent('loader')}
-                onMouseEnter={() => this.handleHoverComponent('loader')}
-                onMouseLeave={() => this.handleHoverComponent('welcome')}
-                background={_theme.palette.sandGrey}
-                foreground={_theme.palette.blue}
-                blockSize={20}
-                blocks={[
-                  [1, 1, 1],
-                  [1, 0, 1],
-                  [0, 0, 1],
-                  [1, 1, 1],
-                ]}
-              />
-              <Qymbol
-                className="space--right--large"
                 onClick={() => this.handleSelectComponent('qymbol')}
                 onMouseEnter={() => this.handleHoverComponent('qymbol')}
                 onMouseLeave={() => this.handleHoverComponent('welcome')}
@@ -517,9 +571,6 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
             />
           </Col>
         </Row>
-        <Col sm={12} md={4} className="inner-space--large hidden">
-          <Loader size={90} />
-        </Col>
         <Col sm={12} md={4} className="inner-space--large hidden">
           <Timer seconds={10} reset={true}>
             Done :)

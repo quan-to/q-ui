@@ -53,4 +53,5 @@ pre {
   padding: 9px;
   margin: 9px 0;
   font-size: 14px;
+  overflow: scroll;
 }
