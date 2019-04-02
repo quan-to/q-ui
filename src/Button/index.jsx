@@ -17,14 +17,16 @@ const Button = (props: Props) => {
   const StyledButton = styled.button`
     width: ${props.fluid ? '100%' : 'auto'};
     padding: ${_theme.rythm.base}px;
-    font-size: ${_theme.typo.scale[3]};
-    background: url(${_theme.imageDirectory}${props.icon}.svg) no-repeat 98% #4664D3;
+    font-size: ${_theme.typo.scale[3]}em;
+    background: url(${_theme.iconDirectory}${props.icon}.svg) no-repeat 98% #4664D3;
     color: white;
     border: none;
     background-size: 40px 30px;
     background-position-x: 96%;
     cursor: ${props.disable ? 'not-allowed' : 'pointer'};
     opacity: ${props.disable ? '0.4' : 1};
+    text-transform: uppercase;
+    font-weight: bold;
   `;
 
   return (

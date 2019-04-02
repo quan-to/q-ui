@@ -13,7 +13,7 @@ type Props = {
   around?: string,
   between?: string,
   reverse?: boolean,
-}
+};
 
 function renderClassNames(props: Props) {
   let classNames = 'row';

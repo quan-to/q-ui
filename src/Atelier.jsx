@@ -146,7 +146,7 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
         name: 'Loader',
         content: (
           <section>
-            <Title className="uppercase color--blue t--bold">Typography</Title>
+            <Title className="uppercase color--blue t--bold">Loader</Title>
             <div className="desc-card">
               <Row>
                 <Col xs={12}>
@@ -174,17 +174,44 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
                   fluid and responsive views.
 
                   <SubTitle secondary className="uppercase color--blue t--bold space--bottom space--top--large">
-                    Container
+                    Containers, Rows and Columns
                   </SubTitle>
-                  <pre className="margin--bottom--large">{`import { Container } from 'q-ui/Flexbox';
+                  <pre className="margin--bottom--large">{`import { Container, Row, Col } from 'q-ui/Flexbox';
 
-<Container>
-  Content here...
-</Container>
-
-<Container fluid>
-  Fluid content here...
+<Container
+  className="my-helper-classname"
+  fluid={true}
+  style={myStyleObj}
+>
+	<Row
+    className="my-helper-classname"
+    start="md"
+    end="lg"
+    top="sm"
+    bottom="md"
+    center="sm"
+    around="lg"
+    between="md"
+    reverse={false}
+  >
+    <Col
+      className="my-helper-classname"
+      xs="8"
+      sm="6"
+      md="4"
+      lg="2"
+      xsOffset="4"
+      smOffset="6"
+      mdOffset="8"
+      lgOffset="10"
+      first="md"
+      last="lg"
+    >
+      Content here
+    </Col>
+  </Row>
 </Container>`}</pre>
+
                 </Col>
               </Row>
             </div>
@@ -193,8 +220,159 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
       button: {
         name: 'Button',
         content: (
-          <div>...</div>
+          <section>
+            <Title className="uppercase color--blue t--bold">Button</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                  <Button className="space--bottom space--right" >Regular</Button>
+                  <Button className="space--bottom"  disable>Disabled</Button>
+                  <Button className="space--bottom"  fluid>Fluid</Button>
+                  <Button className="space--bottom"  fluid icon="arrow-right">Fluid with icon</Button>
+                  <pre className="space--bottom--large">{`import Button from 'q-ui/Button';
+
+<Button
+  onClick={myHandlerFunc}
+  className="my-helper-classname"
+  disable={false}
+  fluid={true}
+  icon="my-icon-name"
+>
+  <span>Click Me</span>
+</Button>`}</pre>
+                  <SubTitle className="uppercase color--blue t--bold space--bottom space--top--large">Notes</SubTitle>
+                  <Paragraph>
+                  If your button's disable prop is true, <strong>onClick</strong> function will not be triggered.<br/>
+                  Describe your button's icon with the name of the image inside the image folder you've described during the themes setting up.
+                  </Paragraph>
+                </Col>
+              </Row>
+            </div>
+          </section>
         )
+      },
+      divider: {
+        name: 'Divider',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Divider</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      form: {
+        name: 'Form',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Form</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      icon: {
+        name: 'Icon',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Icon</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      notification: {
+        name: 'Notification',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Notification</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      list: {
+        name: 'List',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">List</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      image: {
+        name: 'Image',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Image</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>
+        )
+      },
+      if: {
+        name: 'If',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">If</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>)
+      },
+      qymbol: {
+        name: 'Qymbol',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Qymbol</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>)
+      },
+      timer: {
+        name: 'Timer',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Timer</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                </Col>
+              </Row>
+            </div>
+          </section>)
       },
     },
   }
@@ -462,8 +640,8 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
               />
               <Qymbol
                 className="space--right--large"
-                onClick={() => this.handleSelectComponent('qymbol')}
-                onMouseEnter={() => this.handleHoverComponent('qymbol')}
+                onClick={() => this.handleSelectComponent('timer')}
+                onMouseEnter={() => this.handleHoverComponent('timer')}
                 onMouseLeave={() => this.handleHoverComponent('welcome')}
                 background={_theme.palette.sandGrey}
                 foreground={_theme.palette.blue}
