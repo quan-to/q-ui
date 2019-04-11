@@ -6,7 +6,7 @@ import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import uniqid from 'uniqid';
 import InputMask from 'react-input-mask';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 type Props = {
   className?: string,

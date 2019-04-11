@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 type Props = {
   children: any,

@@ -4,7 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Paragraph } from './../Typo';
 import Icon from './../Icon';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 type Props = {
   className?: string,

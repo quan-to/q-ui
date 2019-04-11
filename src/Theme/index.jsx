@@ -1,7 +1,8 @@
 // descbribe your themes here
 
-const themes = {
-  default: {
+let themes = [
+  {
+    name: 'default',
     typo: {
       directory: '/assets/fonts/',
       base: 16,
@@ -46,10 +47,18 @@ const themes = {
     },
     iconDirectory: '/assets/icons/',
     imageDirectory: '/assets/images/',
-  },
-  isNative: false,
-}
+  }
+];
 
-// describe your current theme name here
-const current = 'default';
-export default themes[current];
+let currentTheme = 0;
+
+export default (themeObject) => {
+  let newTheme = Object.assign({}, themes[0]);
+  for (let key in themeObject)
+    newTheme[key] = themeObject[key];
+  }
+
+  themes.push(newTheme);
+
+  return themes[currentTheme];
+};

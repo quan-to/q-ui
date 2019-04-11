@@ -3,7 +3,7 @@
 // eslint-disable-next-line
 import { css, jsx } from '@emotion/core';
 import PinInput from 'react-pin-input';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 type Props = {
   className?: string,

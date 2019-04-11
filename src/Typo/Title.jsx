@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 const H1 = styled.h1`
   font-size: ${_theme.typo.scale[6]}em;

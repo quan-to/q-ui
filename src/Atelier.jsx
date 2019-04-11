@@ -14,7 +14,7 @@ import Divider from './Divider';
 import Loader from './Loader';
 import Timer from './Timer';
 import Qymbol from './Qymbol';
-import _theme from './theme';
+import _theme from './Theme';
 
 class Atelier extends PureComponent {
   constructor(props) {
@@ -68,7 +68,7 @@ class Atelier extends PureComponent {
               <Paragraph>
               Move the <strong>theme.example.js</strong> file to root of <strong>src</strong>.
 
-<pre>mv src/themes.example.js src/themes.js</pre>
+<pre>mv src/Themes.example.js src/Themes.js</pre>
 In the end of theme file you can Input your theme name. Or you can use default as well.
 
 <pre>const current = 'theme name';</pre>
