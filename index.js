@@ -14,5 +14,5 @@ export { default as Loader } from './src/Loader';
 export { default as Logo } from './src/Logo';
 export { default as Notification } from './src/Notification';
 export { default as Timer } from './src/Timer';
-export { default as Typo } from './src/Typo';
+export { Font, Setup, Title, SubTitle, Paragraph } from './src/Typo';
 export { default as Qymbol } from './src/Qymbol';
