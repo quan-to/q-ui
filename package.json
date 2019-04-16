@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npm run test"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quan-to/q-ui.git"
