@@ -16,7 +16,7 @@ npm install;
 Move the `theme.example.js`file to root of `src`.
 
 ```bash
-mv src/themes.example.js src/themes.js
+mv src/Themes.example.js src/Themes.js
 ```
 
 In the end of theme file you can Input your theme name. Or you can use `default`as well.
