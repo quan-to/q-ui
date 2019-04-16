@@ -1,15 +1,7 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 
-type Props = {
-  className?: string,
-  onClick?: Function,
-  size: number,
-};
-
-const Logo = (props: Props) => {
+const Logo = (props) => {
   const StyledLogo = styled.div`
     width: ${props.size}px;
     height: ${(props.size + (props.size * 0.3))}px;

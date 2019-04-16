@@ -1,19 +1,9 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 import uniqid from 'uniqid';
 import _theme from './../Theme';
 
-type Props = {
-  name: string,
-  value: string,
-  id?: string,
-  className?: string,
-  checked?: boolean,
-};
-
-const Checkbox = (props:Props) => {
+const Checkbox = (props) => {
   const id = uniqid();
 
   const Input = styled.input`

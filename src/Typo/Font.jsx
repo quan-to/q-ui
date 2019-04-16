@@ -2,14 +2,7 @@ import React from 'react';
 import { Global, css } from '@emotion/core';
 import _theme from './../Theme';
 
-type Props = {
-  name: string,
-  file: string,
-  weight?: string,
-  tStyle?: string
-};
-
-const Font = (props:Props) => (
+const Font = (props) => (
   <Global styles={css`
     @font-face {
       font-family: ${props.name};

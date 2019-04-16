@@ -1,18 +1,7 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 
-type Props = {
-  className?: string,
-  onClick?: Function,
-  onMouseEnter?: Function,
-  ouMouseLeave?: Function,
-  blockSize: number,
-  blocks: array,
-};
-
-const Qymbol = (props: Props) => {
+const Qymbol = (props) => {
   const StyledSVG = styled.svg`
     width: ${props.blockSize * 3}px;
     height: ${props.blockSize * 4}px;

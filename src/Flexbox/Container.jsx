@@ -1,15 +1,6 @@
-// @flow
-
 import React from 'react';
 
-type Props = {
-  children: any,
-  className?: string,
-  fluid?: any,
-  style?: any,
-};
-
-function renderClassNames(props: Props) {
+function renderClassNames(props) {
   let classNames = `container ${props.className}`;
 
   classNames += props.fluid ? ` container-fluid` : '';
@@ -17,7 +8,7 @@ function renderClassNames(props: Props) {
   return classNames;
 }
 
-const Container = (props: Props) => (
+const Container = (props) => (
   <section
     style={props.style || {}}
     className={renderClassNames(props)}

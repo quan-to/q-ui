@@ -1,23 +1,6 @@
-// @flow
-
 import React from 'react';
 
-type Props = {
-  children: any,
-  className?: string,
-  xs?: number,
-  sm?: number,
-  md?: number,
-  lg?: number,
-  xsOffset?: number,
-  smOffset?: number,
-  mdOffset?: number,
-  lgOffset?: number,
-  first?: string,
-  last?: string,
-}
-
-function renderClassNames(props: Props) {
+function renderClassNames(props) {
   let classNames = '';
 
   const classApplier = (value:[string, string|number|void]) => {
@@ -49,7 +32,7 @@ function renderClassNames(props: Props) {
   return classNames;
 }
 
-const Col = (props: Props) => (
+const Col = (props) => (
   <div
     className={renderClassNames(props)}>
     {props.children}

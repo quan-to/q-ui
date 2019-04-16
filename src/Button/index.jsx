@@ -1,19 +1,8 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
-type Props = {
-  children: any,
-  className?: string,
-  disable?: boolean,
-  fluid?: any,
-  icon: string,
-  onClick?: Function,
-};
-
-const Button = (props: Props) => {
+const Button = (props) => {
   const StyledButton = styled.button`
     width: ${props.fluid ? '100%' : 'auto'};
     padding: ${_theme.rythm.base}px;

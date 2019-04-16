@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
@@ -16,14 +14,7 @@ const H2 = styled.h2`
   font-weight: bold;
 `;
 
-type Props = {
-  children: any,
-  className?: string,
-  primary?: any,
-  secondary?: any
-};
-
-const Title = (props: Props) => props.primary ? (
+const Title = (props) => props.primary ? (
   <H1 className={props.className}>{props.children}</H1>
 ) : (
   <H2 className={props.className}>{props.children}</H2>

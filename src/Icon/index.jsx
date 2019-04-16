@@ -1,16 +1,8 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
-type Props = {
-  name: string,
-  className?: string,
-  size: number
-};
-
-const Icon = (props:Props) => {
+const Icon = (props) => {
   const StyledIcon = styled.div`
     display: inline-block;
     width: ${props.size}px;

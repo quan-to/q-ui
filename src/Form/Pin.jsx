@@ -1,15 +1,8 @@
-// @flow
 /** @jsx jsx */
 // eslint-disable-next-line
 import { css, jsx } from '@emotion/core';
 import PinInput from 'react-pin-input';
 import _theme from './../Theme';
-
-type Props = {
-  className?: string,
-  length: number,
-  onComplete?: Function
-}
 
 const PinStyles = {
   input: {
@@ -23,7 +16,7 @@ const PinStyles = {
   }
 }
 
-const Pin = (props: Props) =>  (
+const Pin = (props) =>  (
   <PinInput
     className={props.className}
     onComplete={props.onComplete}

@@ -1,19 +1,8 @@
-// @flow
-
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import _theme from './../Theme';
 
-
-type Props = {
-  baseLine: number,
-  color: string,
-  font: string,
-  lineHeight: number,
-  reactNative: boolean,
-}
-
-export default function(props: Props) {
+export default function(props) {
   const {
     color,
     font,

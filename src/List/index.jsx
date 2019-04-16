@@ -1,13 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-type Props = {
-  className?: string,
-  items: any
-}
-
-
-const List = (props: Props) => {
+const List = (props) => {
   const Ul = styled.ul`
     list-style: none;
   `;
