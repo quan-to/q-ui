@@ -52,13 +52,14 @@ let themes = [
 
 let currentTheme = 0;
 
-export default (themeObject) => {
+function theme(themeObject) {
   let newTheme = Object.assign({}, themes[0]);
-  for (let key in themeObject)
+  for (let key in themeObject) {
     newTheme[key] = themeObject[key];
   }
 
   themes.push(newTheme);
-
   return themes[currentTheme];
 };
+
+export default theme;
