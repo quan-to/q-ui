@@ -1,22 +1,10 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
 import { Paragraph } from './../Typo';
 import Icon from './../Icon';
-import _theme from './../theme';
+import _theme from './../Theme';
 
-type Props = {
-  className?: string,
-  title?: string,
-  message: any,
-  onClose: Function,
-  crash?: boolean,
-  status: boolean,
-};
-
-
-const Notification = (props: Props) => {
+const Notification = (props) => {
   const StyledDiv = styled.div`
     display: ${props.status ? 'block' : 'none'};
     position: fixed;

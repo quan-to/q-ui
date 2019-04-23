@@ -1,15 +1,8 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
+import _theme from './../Theme';
 
-type Props = {
-  className?: string,
-  size: number,
-};
-
-const Loader = (props: Props) => {
+const Loader = (props) => {
   const AnimatedDivs = styled.div`
     display: relative;
     width: ${props.size}px;

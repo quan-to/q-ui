@@ -1,14 +1,6 @@
-// @flow
-
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
-
-type Props = {
-  className?: string,
-  items: any,
-  onClick?: Functon,
-};
+import _theme from './../Theme';
 
 const Ul = styled.ul`
   list-style: none;
@@ -25,7 +17,7 @@ const Li = styled.li`
   }
 `;
 
-const List = (props:Props) => (
+const List = (props) => (
   <Ul
     className={props.className}
   >

@@ -2,17 +2,9 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
+import _theme from './../Theme';
 
-type Props = {
-  className?: string,
-  file: string,
-  width: number,
-  height: number,
-  position: string
-};
-
-const Image = (props:Props) => {
+const Image = (props) => {
   const StyledImage = styled.div`
     width: auto;
     height: ${props.height}px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import _theme from './../theme';
+import _theme from './../Theme';
 
 const Hr = styled.hr`
   width: 30px;
