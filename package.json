@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/quan-to/q-ui#readme",
   "devDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-router-dom": "^4.3.1",  
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "react-input-mask": "^2.0.4",
