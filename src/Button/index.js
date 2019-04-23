@@ -19,13 +19,9 @@ const Button = (props) => {
   `;
 
   return (
-    <StyledButton
-      className={`${props.className}`}
-      onClick={props.disable ? () => {} : props.onClick}
-      disable={props.disable}
-    >
+    <button>
       {props.children}
-    </StyledButton>
+    </button>
   )
 };
 
