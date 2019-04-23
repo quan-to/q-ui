@@ -19,7 +19,8 @@
     "url": "https://github.com/quan-to/q-ui/issues"
   },
   "homepage": "https://github.com/quan-to/q-ui#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "react-input-mask": "^2.0.4",
     "react-pin-input": "^0.9.0",
