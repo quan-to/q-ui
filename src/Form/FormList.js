@@ -17,7 +17,7 @@ const Li = styled.li`
   }
 `;
 
-const List = (props) => (
+const FormList = (props) => (
   <Ul
     className={props.className}
   >
