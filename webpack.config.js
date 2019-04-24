@@ -22,6 +22,10 @@ module.exports = {
 			}
 		]
 	},
+	externals: {
+ 		react: 'react',
+ 		'react-dom' : 'reactDOM', 
+	},
 	devServer: {
 		contentBase: [path.join(__dirname, 'src'), path.join(__dirname, 'lib')]
 	}

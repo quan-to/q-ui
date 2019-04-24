@@ -3,14 +3,14 @@ import React from 'react';
 function renderClassNames(props) {
   let classNames = '';
 
-  const classApplier = (value:[string, string|number|void]) => {
+  const classApplier = (value) => {
     if (!value[1]) {
       return false;
     }
     classNames += `${value[0]}${value[1]} `;
   };
 
-  const propsTuples:Array<[string, string|number|void]> = [
+  const propsTuples = [
     ['col-xs-', props.xs],
     ['col-sm-', props.sm],
     ['col-md-', props.md],

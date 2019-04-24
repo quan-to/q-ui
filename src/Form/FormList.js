@@ -30,4 +30,4 @@ const List = (props) => (
   </Ul>
 );
 
-export default List;
+export default FormList;

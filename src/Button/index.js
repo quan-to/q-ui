@@ -19,9 +19,13 @@ const Button = (props) => {
   `;
 
   return (
-    <button>
+    <StyledButton
+      className={props.className}
+      onClick={props.disable ? false : props.onClick}
+      disable={props.disable}
+    >
       {props.children}
-    </button>
+    </StyledButton>
   )
 };
 
