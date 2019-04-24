@@ -2,7 +2,7 @@
   "name": "q-ui",
   "version": "0.16.2",
   "description": "Quanto's UI Toolkit",
-  "main": "index.js",
+  "main": "lib/q-ui.min.js",
   "scripts": {
     "test": "npm run test",
     "build": "webpack"
