@@ -9,8 +9,10 @@ const Hr = styled.hr`
   background: ${_theme.palette.blue};
 `;
 
-const Divider = () => (
-  <Hr />
+const Divider = (props) => (
+  <Hr
+    className={props.className}
+  />
 );
 
 export default Divider;
