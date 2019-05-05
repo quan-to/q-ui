@@ -4,6 +4,7 @@ let themes = [
   {
     name: 'default',
     typo: {
+      family: 'Muli, Helvetica, Verdana, Arial',  
       directory: '/assets/fonts/',
       base: 16,
       lineHeight: 1.5,

@@ -6,6 +6,7 @@ const Button = (props) => {
   const StyledButton = styled.button`
     width: ${props.fluid ? '100%' : 'auto'};
     padding: ${_theme.rythm.base}px;
+    font-family: ${_theme.typo.family};
     font-size: ${_theme.typo.scale[3]}em;
     background: url(${_theme.iconDirectory}${props.icon}.svg) no-repeat 98% #4664D3;
     color: white;
