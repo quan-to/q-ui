@@ -2,7 +2,6 @@ import './components/index.css';
 
 export { default as Theme } from './components/Theme';
 // export { default as Atelier } from './components/Atelier';
-console.log(Theme);
 export { default as Button } from './components/Button';
 export { default as Divider} from './components/Divider';
 export { Container, Row, Col } from './components/Flexbox';
