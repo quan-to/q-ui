@@ -4,7 +4,7 @@ let themes = [
   {
     name: 'default',
     typo: {
-      family: 'Muli, Helvetica, Verdana, Arial',  
+      family: 'Muli, Helvetica, Verdana, Arial',
       directory: '/assets/fonts/',
       base: 16,
       lineHeight: 1.5,
@@ -54,13 +54,16 @@ let themes = [
 let currentTheme = 0;
 
 function theme(themeObject) {
-  let newTheme = Object.assign({}, themes[0]);
-  for (let key in themeObject) {
-    newTheme[key] = themeObject[key];
+  if (themeObject) {
+    let newTheme = Object.assign({}, themes[0]);
+    for (let key in themeObject) {
+      newTheme[key] = themeObject[key];
+    }
+
+    themes.push(newTheme);
   }
 
-  themes.push(newTheme);
   return themes[currentTheme];
 };
 
-export default theme;
+export default theme({});
