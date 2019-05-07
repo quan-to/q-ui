@@ -7,7 +7,7 @@ const Button = (props) => {
     width: ${props.fluid ? '100%' : 'auto'};
     padding: ${_theme.rythm.base}px;
     font-family: ${_theme.typo.family};
-    font-size: ${_theme.typo.scale[3]}em;
+    font-size: ${_theme.typo.scale[4]}em;
     background: url(${_theme.iconDirectory}${props.icon}.svg) no-repeat 98% ${props.background || '#4664D3'};
     color: ${props.foreground || '#fff'};
     border: none;
