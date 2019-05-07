@@ -13,7 +13,10 @@ const Icon = (props) => {
   `;
 
   return(
-    <StyledIcon className={props.className} />
+	  <StyledIcon 
+		  className={props.className} 
+		  style={props.style}
+	  />
   );
 };
 
