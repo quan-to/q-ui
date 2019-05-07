@@ -7,6 +7,7 @@ const List = (props) => {
   `;
   const Li = styled.li`
     padding: 4.5px 0;
+    border-bottom: ${props.divider ? `solid thin ${_theme.palette.lightGrey}` : 'none'};
   `;
 
   return(
