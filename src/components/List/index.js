@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import _theme from './../Theme';
 
 const List = (props) => {
   const Ul = styled.ul`
