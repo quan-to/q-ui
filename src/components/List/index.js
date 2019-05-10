@@ -7,12 +7,14 @@ const List = (props) => {
     list-style: none;
   `;
   const Li = styled.li`
-    padding: 4.5px 0;
+    padding: 18px 0;
     border-bottom: ${props.divider ? `solid thin ${_theme.palette.lightGrey}` : 'none'};
   `;
 
   return(
-    <Ul className={props.className}>
+    <Ul
+      {...props}
+    >
       {props.items.map((item) => (
         <Li key={item.id}>{item.content}</Li>
       ))}
