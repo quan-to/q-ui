@@ -22,7 +22,7 @@ const Button = (props) => {
   return (
     <StyledButton
       className={props.className}
-      onClick={props.disable ? false : props.onClick}
+      onClick={props.disable ? undefined : props.onClick}
       disable={props.disable}
     >
       {props.children}
