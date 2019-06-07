@@ -18,6 +18,10 @@ const Qymbol = (props) => {
       fill: ${props.foreground};
     }
   `;
+  const sizes = {
+      width: props.blockSize,
+      height: props.blockSize
+  };
 
   return (
     <StyledSVG
@@ -30,6 +34,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[0][0]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 1}
@@ -37,6 +42,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[0][1]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 2}
@@ -44,6 +50,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[0][2]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 0}
@@ -51,6 +58,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[1][0]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 1}
@@ -58,6 +66,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[1][1]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 2}
@@ -65,6 +74,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[1][2]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 0}
@@ -72,6 +82,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[2][0]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 1}
@@ -79,6 +90,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[2][1]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 2}
@@ -86,6 +98,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[2][2]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 0}
@@ -93,6 +106,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[3][0]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 1}
@@ -100,6 +114,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[3][1]) ? 'selected' : ''
         }
+        {...sizes}
       />
       <rect
         x={props.blockSize * 2}
@@ -107,6 +122,7 @@ const Qymbol = (props) => {
         className={
           (props.blocks[3][2]) ? 'selected' : ''
         }
+        {...sizes}
       />
 
     </StyledSVG>
