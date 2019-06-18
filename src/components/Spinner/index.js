@@ -6,97 +6,53 @@ const Spinner = (props) => {
   const AnimateSpinner = styled.div`
   display: inline-block;
   position: relative;
-  width: ${props.size}px;
-  height: ${props.size}px;
+  width: ${props.size /2 }px;
+  height: ${props.size / 2}px;
+  padding-left: ${props.size / 2}px;
   > div {
-    animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    transform-origin: 32px 32px;
-  }
-  > div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 6px;
-    height: 6px;
+    color: ${_theme.palette.blue};
+    font-size: ${props.size / 4}px;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
-    background: ${_theme.palette.blue};
-    margin: -3px 0 0 -3px;
-  }
-  > div:nth-child(1) {
-    animation-delay: -0.036s;
-  }
-  > div:nth-child(1):after {
-    top: 50px;
-    left: 50px;
-  }
-  > div:nth-child(2) {
-    animation-delay: -0.072s;
-  }
-  > div:nth-child(2):after {
-    top: 54px;
-    left: 45px;
-  }
-  > div:nth-child(3) {
-    animation-delay: -0.108s;
-  }
-  > div:nth-child(3):after {
-    top: 57px;
-    left: 39px;
-  }
-  > div:nth-child(4) {
-    animation-delay: -0.144s;
-  }
-  > div:nth-child(4):after {
-    top: 58px;
-    left: 32px;
-  }
-  > div:nth-child(5) {
-    animation-delay: -0.18s;
-  }
-  > div:nth-child(5):after {
-    top: 57px;
-    left: 25px;
-  }
-  > div:nth-child(6) {
-    animation-delay: -0.216s;
-  }
-  > div:nth-child(6):after {
-    top: 54px;
-    left: 19px;
-  }
-  > div:nth-child(7) {
-    animation-delay: -0.252s;
-  }
-  > div:nth-child(7):after {
-    top: 50px;
-    left: 14px;
-  }
-  > div:nth-child(8) {
-    animation-delay: -0.288s;
-  }
-  > div:nth-child(8):after {
-    top: 45px;
-    left: 10px;
+    position: relative;
+    -webkit-animation: spin 1.3s infinite linear;
+    animation: spin 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
   }
   @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
+    0%,
     100% {
-      transform: rotate(360deg);
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
     }
   }
   `;
   return (
     <AnimateSpinner>
-        <div/>
-        <div/>
-        <div/>
-        <div/>
-        <div/>
-        <div/>
-        <div/>
-        <div/>
+      <div />
     </AnimateSpinner>
   )
 };

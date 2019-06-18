@@ -1,4 +1,3 @@
-Spinner example:
 ```jsx noeditor
-<Spinner size="50🍕" />
+<Spinner size="21" />
 ```
