@@ -12,6 +12,7 @@ import {
 } from './Form';
 import Divider from './Divider';
 import Loader from './Loader';
+import Spinner from './Spinner';
 import Timer from './Timer';
 import Qymbol from './Qymbol';
 import _theme from './Theme';
@@ -154,6 +155,23 @@ Use rythm to store your setup data about vertical rhythm (or vertical spacement'
                   We suggest you use him with strict size container around.
                   <pre className="margin--bottom--large">{`<Loader size={50} />`}</pre>
                   <Loader size={50} />
+                </Col>
+              </Row>
+            </div>
+          </section>),
+      },
+      spinner: {
+        name: 'Spinner',
+        content: (
+          <section>
+            <Title className="uppercase color--blue t--bold">Spinner</Title>
+            <div className="desc-card">
+              <Row>
+                <Col xs={12}>
+                  It's an animated component.
+                  We suggest you use him with strict size container around.
+                  <pre className="margin--bottom--large">{`<Spinner size={50} />`}</pre>
+                  <Spinner size={50} />
                 </Col>
               </Row>
             </div>
