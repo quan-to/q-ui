@@ -16,6 +16,7 @@ const Checkbox = (props) => {
 
   const Label = styled.label`
     display: block;
+    cursor: pointer;
     width: ${_theme.rythm.scale[1]}px;
     height: ${_theme.rythm.scale[1]}px;
     background: url(${_theme.imageDirectory}checkbox-blank.svg) no-repeat;
