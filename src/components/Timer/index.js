@@ -46,7 +46,13 @@ class Timer extends PureComponent {
     clearInterval(this.state.timer);
   }
 
-  reset() {
+  componentDidUpdate() {
+    if (this.state.seconds === 0) {
+      clearInterval(this.state.timer);
+    }
+  }
+
+  reset(exposedFunction) {
     this.setState({
       seconds: this.props.seconds,
       timer: setInterval(() => {
@@ -55,6 +61,8 @@ class Timer extends PureComponent {
         }))
       }, 1000),
     });
+
+    exposedFunction();
   }
 
   render() {
@@ -66,11 +74,8 @@ class Timer extends PureComponent {
       font-size: 16px;
       text-decoration: underline;
       margin-top: ${_theme.rythm.base}px;
+      cursor: pointer;
     `;
-
-    if (this.state.seconds === 0) {
-      clearInterval(this.state.timer);
-    }
 
     return(
       <div>
@@ -79,10 +84,10 @@ class Timer extends PureComponent {
         </If>
         <If test={this.state.seconds === 0}>
           {this.props.children}
-
+          
           <If test={this.props.resetable}>
-            <div s>
-            <StyledButton onClick={() => this.reset()}>
+            <div>
+            <StyledButton onClick={() => this.reset(this.props.onClick)}>
               {this.props.resetable}
             </StyledButton>
             </div>
