@@ -62,7 +62,9 @@ class Timer extends PureComponent {
       }, 1000),
     });
 
-    exposedFunction();
+    typeof exposedFunction == 'function'
+    ? exposedFunction()
+    : console.log('The argument passed is not a function')
   }
 
   render() {
