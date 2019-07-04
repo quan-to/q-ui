@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import Button from './../Button';
 import If from './../If';
 import _theme from './../Theme';
 
@@ -62,9 +62,7 @@ class Timer extends PureComponent {
       }, 1000),
     });
 
-    typeof exposedFunction == 'function'
-    ? exposedFunction()
-    : console.log('The argument passed is not a function')
+    exposedFunction()
   }
 
   render() {
@@ -98,6 +96,10 @@ class Timer extends PureComponent {
       </div>
     );
   }
+}
+
+Timer.propTypes = {
+  onClick: PropTypes.func
 }
 
 export default Timer;
