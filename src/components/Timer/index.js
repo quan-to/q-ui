@@ -84,7 +84,7 @@ class Timer extends PureComponent {
         </If>
         <If test={this.state.seconds === 0}>
           {this.props.children}
-          
+
           <If test={this.props.resetable}>
             <div>
             <StyledButton onClick={() => this.reset(this.props.onClick)}>
@@ -99,7 +99,7 @@ class Timer extends PureComponent {
 }
 
 Timer.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func.isRequired
 }
 
 export default Timer;
