@@ -6,7 +6,7 @@ const Divider = (props) => {
   const Hr = styled.hr`
     width: 30px;
     height: 2px;
-    margin: ${_theme.rythm.scale[1]}px 0;
+    margin: ${props.marginY || _theme.rythm.scale[1]}px ${props.marginX || 0}px;
     background: ${props.foreground || _theme.palette.blue};
   `;
 
