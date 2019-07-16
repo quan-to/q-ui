@@ -11,13 +11,7 @@ const Avatar = (props) => {
   `
   return (
     <div>
-      <If test={props.photo}>
-        <StyledAvatar className={props.className} src={props.photo} />
-      </If>
-
-      <If test={props.photo  === null || props.photo === undefined}>
-        <StyledAvatar className={props.className} src="../../assets/icons/avatar-icon.svg"/>
-      </If>
+      <StyledAvatar className={props.className} src={ `${props.photo || '../../assets/icons/avatar-icon.svg'}` } />
     </div>
   )
 }
