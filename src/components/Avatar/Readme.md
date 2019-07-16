@@ -2,7 +2,7 @@ React component example:
 
 ```jsx
 <Avatar
-  size="90"
   Circle
+  photo="https://img.icons8.com/ultraviolet/2x/avatar.png"
 />
 ```
