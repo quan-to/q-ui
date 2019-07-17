@@ -17,3 +17,5 @@ export { default as Notification } from './components/Notification';
 export { default as Qymbol } from './components/Qymbol';
 export { default as Timer } from './components/Timer';
 export { Font, Paragraph, Setup, SubTitle, Title } from './components/Typo';
+export { default as Avatar } from './components/Avatar';
+

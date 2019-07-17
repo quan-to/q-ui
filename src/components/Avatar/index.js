@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import If from './../If';
 
 const Avatar = (props) => {
   const StyledAvatar = styled.img`
