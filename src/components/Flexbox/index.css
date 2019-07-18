@@ -278,7 +278,6 @@
 
   .container--mobile {
     max-width: 580px;
-    box-shadow: 0px 1px 1px #ddd;
     margin-top: 54px;
     min-height: 500px;
   }
