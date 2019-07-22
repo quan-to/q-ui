@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
