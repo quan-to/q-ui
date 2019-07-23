@@ -16,7 +16,7 @@ const List = (props) => {
       {...props}
     >
       {props.items.map((item) => (
-        <Li key={item.id}>{item.content}</Li>
+        <Li key={item.key}>{item.content}</Li>
       ))}
     </Ul>
   )
