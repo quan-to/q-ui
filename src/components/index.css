@@ -267,6 +267,7 @@ a {
 
 .center { margin: 0 auto; }
 
+.block { display: block }
 .hide { display: none }
 .uppercase { text-transform: uppercase }
 .pointer { cursor: pointer }
