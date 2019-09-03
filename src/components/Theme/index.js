@@ -29,6 +29,7 @@ let themes = [
     grid: {
       container: 960,
     },
+    borderAndRadius: 3,
     palette: {
       blue: '#4664D3',
       lightBlue: '#4a90e2',
