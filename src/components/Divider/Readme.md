@@ -1,10 +1,22 @@
-React component example:
-
 ```jsx
 <Divider
   className="your-class"
   marginY="9"
-  marginX="9"
+  marginX="0"
+/>
+<p>...</p>
+<Divider
+  className="your-class"
+  marginY="9"
+  marginX="50"
+  foreground="#DDD"
+/>
+<p>...</p>
+<Divider
+  className="your-class"
+  marginY="0"
+  marginX="100"
   foreground="#000"
 />
+<p>...</p>
 ```

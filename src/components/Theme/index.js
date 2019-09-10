@@ -30,6 +30,7 @@ let themes = [
       container: 960,
     },
     borderAndRadius: 3,
+    transitionProps: 'ease-out 0.1s',
     palette: {
       blue: '#4664D3',
       lightBlue: '#4a90e2',
@@ -47,8 +48,8 @@ let themes = [
       sandGrey: '#eee',
       white: '#fff',
     },
-    iconDirectory: '/assets/icons/',
-    imageDirectory: '/assets/images/',
+    iconDirectory: '/icons/',
+    imageDirectory: '/images/',
   }
 ];
 

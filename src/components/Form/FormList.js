@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
@@ -20,6 +21,7 @@ const Li = styled.li`
 const FormList = (props) => (
   <Ul
     className={props.className}
+    style={props.style}
   >
     {props.items.map((item) => (
       <Li
@@ -29,5 +31,12 @@ const FormList = (props) => (
     ))}
   </Ul>
 );
+
+FormList.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.string,
+  items: PropTypes.any.isRequired,
+  onClick: PropTypes.any,
+}
 
 export default FormList;

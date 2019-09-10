@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
@@ -16,12 +17,40 @@ const H5 = styled.h5`
 
 const SubTitle = (props) => {
   if (props.primary) {
-    return(<H3 className={props.className}>{props.children}</H3>);
-  } else if(props.secondary) {
-    return(<H4 className={props.className}>{props.children}</H4>);
+    return (
+      <H3
+        style={props.style}
+        className={props.className}
+      >
+        {props.children}
+      </H3>
+    );
+  } else if (props.secondary) {
+    return (
+      <H4
+        style={props.style}
+        className={props.className}
+      >
+        {props.children}
+      </H4>
+    );
   } else {
-    return(<H5 className={props.className}>{props.children}</H5>);
+    return (
+      <H5
+        style={props.style}
+        className={props.className}
+      >
+        {props.children}
+      </H5>
+    );
   }
 }
+
+SubTitle.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+};
 
 export default SubTitle;

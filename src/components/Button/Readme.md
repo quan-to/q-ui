@@ -1,9 +1,22 @@
-React component example:
-Or disable an editor by passing a `noeditor` modifier:
 
-```jsx noeditor
-<Button>Push Me</Button>
+```jsx 
+  <p>
+    <Button>Regular</Button>
+  </p>
+  <p>
+    <Button disable>Disabled</Button>
+  </p>
+  <p>
+    <Button fluid>Fluid</Button>
+  </p>
+  <p>
+    <Button fluid icon="arrow-right">Fluid with icon</Button>
+  </p>
 ```
 
-To render an example as highlighted source code add a `static` modifier:
+### Notes
+
+- If your button's `disable` prop is `true`, `onClick` function will not be triggered.
+
+- Describe your button's `icon` with the name of the image inside the image folder you've described during the themes setting up.
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
@@ -11,9 +12,25 @@ const Small = styled.small`
 `;
 
 const Paragraph = (props) => props.small ? (
-  <Small className={props.className}>{props.children}</Small>
+  <Small
+    style={props.style}
+    className={props.className}
+  >
+    {props.children}
+  </Small>
 ) : (
-  <P className={props.className}>{props.children}</P>
-)
+    <P
+      style={props.style}
+      className={props.className}
+    >
+      {props.children}
+    </P>
+  )
+
+Paragraph.propTypes = {
+  style: PropTypes.object,
+  className: PropTypes.string,
+  small: PropTypes.bool,
+}
 
 export default Paragraph;

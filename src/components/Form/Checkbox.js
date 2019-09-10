@@ -1,25 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import uniqid from 'uniqid';
-import _theme from './../Theme';
+import THEME from './../Theme';
 
 const Checkbox = (props) => {
   const id = uniqid();
 
   const Input = styled.input`
     display: none;
+    transition: all ${THEME.transitionProps};
 
     :checked + label {
-      background: url(${_theme.imageDirectory}checkbox.svg) no-repeat;
+      background: url(${THEME.iconDirectory}checkbox.svg) no-repeat;
     }
   `;
 
   const Label = styled.label`
     display: block;
     cursor: pointer;
-    width: ${_theme.rythm.scale[1]}px;
-    height: ${_theme.rythm.scale[1]}px;
-    background: url(${_theme.imageDirectory}checkbox-blank.svg) no-repeat;
+    width: ${THEME.rythm.scale[1]}px;
+    height: ${THEME.rythm.scale[1]}px;
+    background: url(${THEME.iconDirectory}checkbox-blank.svg) no-repeat;
   `;
 
   return (
@@ -37,5 +39,14 @@ const Checkbox = (props) => {
     </div>
   );
 }
+
+Checkbox.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
+  className: PropTypes.string,
+  onChange: PropTypes.any,
+  checked: PropTypes.any,
+};
 
 export default Checkbox;

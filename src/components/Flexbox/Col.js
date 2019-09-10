@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function renderClassNames(props) {
   let classNames = '';
@@ -35,12 +36,24 @@ function renderClassNames(props) {
 const Col = (props) => (
   <div
     className={renderClassNames(props)}>
+    style={props.style}
     {props.children}
   </div>
 );
 
-Col.defaultProps = {
-  className: '',
+Col.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.any,
+  xs: PropTypes.number,
+  sm: PropTypes.number,
+  md: PropTypes.number,
+  lg: PropTypes.number,
+  xsOffset: PropTypes.number,
+  smOffset: PropTypes.number,
+  mdOffset: PropTypes.number,
+  lgOffset: PropTypes.number,
+  first: PropTypes.string,
+  last: PropTypes.string,
 };
 
 export default Col;

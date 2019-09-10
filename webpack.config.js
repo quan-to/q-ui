@@ -19,11 +19,25 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
-			}
+			},
+			{
+				test: /\.svg$/,
+				use: [
+					{
+						loader: "babel-loader"
+					},
+					{
+						loader: "react-svg-loader",
+						options: {
+							jsx: true // true outputs JSX tags
+						}
+					}
+				]
+			},
 		]
 	},
 	externals: {
- 		react: 'react',
+		react: 'react',
 	},
 	devServer: {
 		contentBase: [path.join(__dirname, 'src'), path.join(__dirname, 'lib')]

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
@@ -8,19 +9,20 @@ const Button = (props) => {
     padding: ${_theme.rythm.base + _theme.borderAndRadius}px ${_theme.rythm.base * 1.5}px ${_theme.rythm.base}px;
     font-family: ${_theme.typo.family};
     font-size: ${_theme.typo.scale[2]}em;
-    background: url(${_theme.iconDirectory}${props.icon}.svg) no-repeat 98% ${props.background || _theme.palette.blue};
-    color: ${props.foreground || _theme.palette.white};
-    border: none;
+    font-weight: regular;
+    background-image: ${props.icon ? 'url(' + _theme.iconDirectory + props.icon + '.svg) no-repeat 98%' : 'none'};
+    background-color: ${props.background || _theme.palette.blue};
     background-size: 40px 30px;
     background-position-x: 96 %;
+    color: ${props.foreground || _theme.palette.white};
+    border: none;
+    border-radius: ${_theme.borderAndRadius}px;
+    border-bottom: solid ${_theme.borderAndRadius}px rgba(0, 0, 0, 0.2);
     cursor: ${props.disable ? 'not-allowed' : 'pointer'};
     opacity: ${props.disable ? '0.4' : 1};
     text-transform: capitalized;
-    font-weight: regular;
     text-align: ${props.align || 'center'};
-    border-radius: ${_theme.borderAndRadius}px;
-    border-bottom: solid ${_theme.borderAndRadius}px rgba(0, 0, 0, 0.2);
-    transition: all ease-out 0.1s;
+    transition: all ${_theme.transitionProps};
     outline: none;
 
     :focus {
@@ -29,21 +31,30 @@ const Button = (props) => {
 
     :active {
       border-bottom: solid ${_theme.borderAndRadius}px rgba(0, 0, 0, 0);
-      background: url(${_theme.iconDirectory}${props.icon}.svg) no-repeat 98% ${_theme.palette.lightBlue};
       box-shadow: none;
+      filter: brightness(90%);
     }
 `;
 
   return (
     <StyledButton
       className={props.className}
+      style={props.style}
       onClick={props.disable ? undefined : props.onClick}
       disable={props.disable}
-
+      icon={props.icon}
     >
       {props.children}
     </StyledButton>
   )
+};
+
+Button.propTypes = {
+  clasName: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.any.isRequired,
+  disable: PropTypes.bool,
+  icon: PropTypes.string,
 };
 
 export default Button;

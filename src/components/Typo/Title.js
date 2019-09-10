@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import _theme from './../Theme';
 
@@ -15,9 +16,25 @@ const H2 = styled.h2`
 `;
 
 const Title = (props) => props.primary ? (
-  <H1 className={props.className}>{props.children}</H1>
+  <H1
+    style={props.style}
+    className={props.className}
+  >
+    {props.children}
+  </H1>
 ) : (
-  <H2 className={props.className}>{props.children}</H2>
-);
+    <H2
+      style={props.style}
+      className={props.className}
+    >
+      {props.children}
+    </H2>
+  );
+
+Title.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  primary: PropTypes.bool,
+};
 
 export default Title;
