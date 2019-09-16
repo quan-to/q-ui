@@ -122,6 +122,7 @@ class Text extends PureComponent {
             maskChar={props.maskChar}
             ref={this.input}
             onChange={props.onChange}
+            value={props.value}
           />
         )}
 
