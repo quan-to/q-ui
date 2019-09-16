@@ -1,5 +1,4 @@
 /** @jsx jsx */
-
 import React, { PureComponent } from 'react';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
@@ -122,6 +121,7 @@ class Text extends PureComponent {
             mask={props.mask}
             maskChar={props.maskChar}
             ref={this.input}
+            onChange={props.onChange}
           />
         )}
 
