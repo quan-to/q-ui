@@ -111,6 +111,7 @@ class Text extends PureComponent {
             placeholder={props.placeholder}
             name={props.name}
             ref={this.password}
+            value={props.value}
           />
         ) : (
           <InputMask
@@ -123,6 +124,8 @@ class Text extends PureComponent {
             ref={this.input}
             onChange={props.onChange}
             value={props.value}
+            onFocus={props.onFocus}
+            onBlur={props.onBlur}
           />
         )}
 
