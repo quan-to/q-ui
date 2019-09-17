@@ -30,7 +30,7 @@ class Text extends PureComponent {
   render() {
     const { props } = this;
 
-    const TextGroup = styled.div`
+    const TextGroupStyle = css`
       position: relative;
       padding: 15px 0 0;
       margin-top: 10px;
@@ -102,7 +102,7 @@ class Text extends PureComponent {
     const id = uniqid();
 
     return(
-      <TextGroup className={props.className}>
+      <div css={TextGroupStyle} >
         {props.password ? (
           <input
             type="password"
@@ -139,7 +139,7 @@ class Text extends PureComponent {
           className="form__cancel"
           onClick={this.handleErase}
         />
-      </TextGroup>
+      </div>
     );
   }
 }
