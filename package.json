@@ -22,27 +22,27 @@
   },
   "homepage": "https://github.com/quan-to/q-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9",
-    "babel-loader": "^8.0.5",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-input-mask": "^2.0.4",
     "react-pin-input": "^0.9.0",
-    "react-router-dom": "^4.3.1",
-    "react-styleguidist": "^9.0.9",
+    "react-router-dom": "^5.0.1",
+    "react-styleguidist": "^9.1.11",
     "uniqid": "https://github.com/JonathanStoye/uniqid.git",
-    "webpack": "^4.30.0"
+    "webpack": "^4.36.1"
   },
   "dependencies": {
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.1.0",
     "prop-types": "^15.7.2",
     "style-loader": "^0.23.1",
-    "webpack-cli": "^3.3.1"
+    "webpack-cli": "^3.3.6"
   },
   "peerDependencies": {
     "react": "^16.8.0",
