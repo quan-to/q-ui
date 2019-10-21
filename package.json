@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "lint": "./node_modules/.bin/eslint src"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,11 @@
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-input-mask": "^2.0.4",
